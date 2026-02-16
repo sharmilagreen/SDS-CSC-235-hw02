@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "style.css">
+        <title>Exploratory Data Analysis of CT Electric Vehicles</title>
+    </head>
+
+    <body>
+        <div>
+            <h1>Exploratory Data Analysis of CT Electric Vehicles</h1>
+            <p><a href = "https://catalog.data.gov/dataset/electric-vehicle-registration-data" class = link>This dataset</a> contains information about electric vehicles registered in the state of Connecticut from 2021 onwards. It is important to note that the most recent data is from 12/31/2024, and that the weights of regular/non-commerical vehicles are unreported, which may lead to bias in investigating Connecticut Electric Vehicle weight or age.</p>
+        </div>
+        <div>
+            <h2>Exploratory Data Analysis</h2>
+            <p>We peform exploratory data analysis on the following variables present in the dataset:</p>
+            <ul>
+                <li>Vehicle Make</li>
+                <li>Registered Usage</li>
+                <li>Type of EV</li>
+                <li>Vehicle Weight Category</li>
+                <li>Weight</li>
+                <li>Year</li>
+            </ul>
+            <div>
+                <h3>Summary Statistics</h3>   
+                <h4>Quantitative Variables (Year and Recorded Weight)</h4>
+                <img id = "quant1" src="./summarystats/year_summary_stats.jpeg" alt="Year Summary Stats" height = 250>
+                <img id = "quant2" src="./summarystats/weight_summary_stats.jpeg" alt="Weight Summary Stats" height = 250>
+                <button onclick = "quantVis()">View Visuals of Statistics</button>
+                <button onclick = "quantSum()">View Summary Statistics Table</button>
+            </div>
+
+            <div>
+                <h3>Frequency Visualization Tables</h3>
+                <h4>Categorical Frequency Tables (Vehicle Make and Registered Usage)</h4>
+                <img id = "cat1" src="./summarystats/vehicle_make_summary.jpeg" alt="Vehicle Make Freq. Table" height = 600>
+                <img id = "cat2" src="./summarystats/usage_summary.jpeg" alt="Vehicle Usage Freq. Table" height = 600>
+                <button onclick = "catVis()">View Distribution Visuals</button>
+                <button onclick = "catFreq()">View Frequency Table</button>                
+                <h4>Ordinal Frequency Tables (Electric Vehicle Type and Weight Class)</h4>
+                <img id = "ord1" src="./summarystats/type_frequency_table.jpeg" alt="EV Type" height = 250>
+                <img id = "ord2" src="./summarystats/category_frequency_table.jpeg" alt="Vehicle Weight Cat Freq. Table" height = 250>
+                <button onclick = "ordVis()">View Distribution Visuals</button>
+                <button onclick = "ordFreq()">View Frequency Table</button> 
+                <p>Key for Electric Vehicle Type (by descending order of emissions):</p>
+                <ul>
+                    <li>PHEV: Plug in Hybrid</li>
+                    <li>BEMC: Battery-powered Electric Motorcycle</li>
+                    <li>BEV: Battery-powered Electric Vehicle</li>
+                    <li>FCEV: Fuel Cell Electric Vehicle</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Relationships Between Variables Visualization</h3>
+                <img src = "./visualizations/makeovertime.jpg" height = 500>
+                <img src = "./visualizations/regovertime.jpg" height = 500>
+                <img src = "./visualizations/usagebyweight.jpg" height = 500>
+            </div>
+        </div>
+        <div id = "final" onmouseover="mouseOver()" onmouseout="mouseOut()">
+            <h2>Final Hypotheses</h2>
+            <p>Based on this EDA, we propose the following hypotheses:</p>
+            <ul>
+                <li>The rise in EV registrations in Connecticut prior to 2024 was as a result of falling EV prices, tax benefits in buying an EV, and scientific advancement in EV efficiency.</li>
+                <li>Significant falling in EV registrations in Connecticut is due to anticipating federal policy changes that have discouraged EV registration in the past year.</li>
+                <li>School bus weight distribution has fewer outliers because of the standardized size and limited distributors of school buses.</li>
+            </ul>
+        </div>
+        <div>
+            <p>HW02: Sharmila Green and Gabriela Eastwood</p>
+        </div>
+        <script src = "index.js"></script>
+    </body>
+
+</html>

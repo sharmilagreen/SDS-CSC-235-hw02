@@ -1,0 +1,12 @@
+body{
+    font-family: Arial;
+    background-color:rgb(161, 199, 199);
+}
+
+#final {
+	text-align: center;
+}
+
+.highlight {
+	background: #ffffe0;
+}
